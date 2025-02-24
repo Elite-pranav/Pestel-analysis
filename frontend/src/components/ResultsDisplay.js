@@ -29,6 +29,7 @@ const ResultsDisplay = ({ results }) => {
 
               if (
                 formattedPoint === "Political Analysis Summary" ||
+                formattedPoint === "2. Political Factor Analysis" ||
                 formattedPoint === "Political Factor Analysis" ||
                 formattedPoint === "Government Policies:" ||
                 formattedPoint === "Political Stability:" ||
@@ -36,6 +37,15 @@ const ResultsDisplay = ({ results }) => {
                 formattedPoint === "Industry Regulations:" ||
                 formattedPoint === "Political Stability:" ||
                 formattedPoint === "Industry Regulations:" ||
+                formattedPoint === "Summary" ||
+                formattedPoint === "1. Summary" ||
+                formattedPoint === "Political Factor Analysis" ||
+                formattedPoint === "Government Policies" ||
+                formattedPoint === "Political Stability" ||
+                formattedPoint === "Tax Regulations" ||
+                formattedPoint === "Industry Regulations" ||
+                formattedPoint === "Political Stability" ||
+                formattedPoint === "Industry Regulations" ||
                 formattedPoint === "Summary"
 
               ) {

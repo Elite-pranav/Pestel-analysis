@@ -1,12 +1,13 @@
 {
-    "business_name": "Tesla",
-    "industry": "Automotive",
-    "geographical_focus": "Global",
-    "time_frame": "Long-term",
-    "target_market": "EV Consumers",
-    "competitors": "Ford, GM, Rivian",
+    "business_name": "Reliance Jio",
+    "industry": "Telecom",
+    "geographical_focus": "India",
+    "time_frame": "Short-term",
+    "target_market": "5G sector",
+    "competitors": "Airtel, Vodafone",
     "political_factors": {
         "Government Policies": true,
-        "Tax Regulations": true
+        "Tax Regulations": true,
+        "Global Trade Agreements": true
     }
 }

@@ -5,6 +5,17 @@ import spacy
 from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 import os
+from dotenv import load_dotenv
+
+# Load .env file from the PESTEL folder
+dotenv_path = os.path.join(os.path.dirname(__file__), "..", ".env")
+load_dotenv(dotenv_path)
+
+# Retrieve API key from .env
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+if not OPENAI_API_KEY:
+    raise ValueError("❌ OPENAI_API_KEY is missing! Check your .env file.")
 
 # Load spaCy model for Named Entity Recognition (NER)
 nlp = spacy.load("en_core_web_sm")
@@ -12,7 +23,6 @@ nlp.max_length = 5000000  # Set a higher limit (5 million characters)
 
 
 # Set up OpenAI API key
-OPENAI_API_KEY =  os.getenv("OPENAI_API_KEY")   # Replace with your actual API key
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 # Load scraping input

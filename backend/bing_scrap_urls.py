@@ -1,13 +1,24 @@
 import requests
 import json
 import os
+from dotenv import load_dotenv
+
+# Load .env from the PESTEL directory
+dotenv_path = os.path.join(os.path.dirname(__file__), "..", ".env")
+load_dotenv(dotenv_path)
+
+# Get API key from .env
+BING_API_KEY = os.getenv("BING_API_KEY")
+
+if not BING_API_KEY:
+    raise ValueError("❌ BING_API_KEY is missing! Check your .env file.")
+
 
 # Load input dynamically from scraping_input.json
 with open("scraping_input.json", "r", encoding="utf-8") as f:
     user_input = json.load(f)
-
-BING_API_KEY = os.getenv("BING_API_KEY") # Replace with your actual Bing API Key
-
+    
+    
 def generate_search_queries(user_input):
     """Generate categorized Bing search queries focusing on political factors, news, government sites, and research papers."""
     business_name = user_input.get("business_name", "")

@@ -3,9 +3,17 @@ from bs4 import BeautifulSoup
 import json
 import pandas as pd
 import os
+from dotenv import load_dotenv
 
-# Set up ScraperAPI key
-SCRAPER_API_KEY =  os.getenv("SCRAPER_API_KEY")
+# Load .env file from the PESTEL folder
+dotenv_path = os.path.join(os.path.dirname(__file__), "..", ".env")
+load_dotenv(dotenv_path)
+
+# Retrieve API key from .env
+SCRAPER_API_KEY = os.getenv("SCRAPER_API_KEY")
+
+if not SCRAPER_API_KEY:
+    raise ValueError("❌ SCRAPER_API_KEY is missing! Check your .env file.")
 
 # Headers to simulate a real browser request
 HEADERS = {
