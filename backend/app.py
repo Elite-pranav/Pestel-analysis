@@ -28,17 +28,19 @@ def get_summary(business_name):
 
 
 def run_script(script_name):
-    """Runs a Python script using the current Python interpreter."""
-    print(f"\n🚀 Running {script_name}...\n")
+    """Runs a Python script with the correct path."""
+    script_path = os.path.join(os.getcwd(), "backend", script_name)  # Full path
+    print(f"\n🚀 Running {script_path}...\n")
+    
     start_time = time.time()
-
     try:
-        subprocess.run([sys.executable, script_name], check=True)  # Execute script
+        subprocess.run([sys.executable, script_path], check=True)  # Execute script
         print(f"✅ {script_name} completed successfully in {time.time() - start_time:.2f} seconds\n")
         return True
     except subprocess.CalledProcessError as e:
         print(f"❌ Error while running {script_name}: {e}")
         return False
+
 
 @app.route("/analyze_pestel", methods=["POST"])
 def analyze_pestel():
@@ -55,15 +57,15 @@ def analyze_pestel():
     print("✅ Input saved to scraping_input.json")
 
     # Step 1: Extract URLs
-    if not run_script("bing_scrap_urls.py"):
+    if not run_script("backend/bing_scrap_urls.py"):
         return jsonify({"error": "Failed at URL extraction"}), 500
 
     # Step 2: Scrape Data
-    if not run_script("extract_data.py"):
+    if not run_script("backend/extract_data.py"):
         return jsonify({"error": "Failed at Data Extraction"}), 500
 
     # Step 3: Summarize Data
-    if not run_script("summarization.py"):
+    if not run_script("backend/summarization.py"):
         return jsonify({"error": "Failed at Summarization"}), 500
 
     summary_file = f"{data['business_name'].lower()}_political_summary.json"
