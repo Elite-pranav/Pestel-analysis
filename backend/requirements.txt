@@ -10,6 +10,8 @@ selenium==4.28.1
 bs4==0.0.2
 soupsieve==2.6
 openai==1.64.0
-spacy==3.7.2
 gunicorn==21.2.0
 python-dotenv
+spacy==3.7.2
+thinc==8.2.2
+cupy-cuda12x
