@@ -55,15 +55,15 @@ def analyze_pestel():
     print("✅ Input saved to scraping_input.json")
 
     # Step 1: Extract URLs
-    if not run_script("bing_scrap_urls.py"):
+    if not run_script("backend/bing_scrap_urls.py"):
         return jsonify({"error": "Failed at URL extraction"}), 500
 
     # Step 2: Scrape Data
-    if not run_script("extract_data.py"):
+    if not run_script("backend/extract_data.py"):
         return jsonify({"error": "Failed at Data Extraction"}), 500
 
     # Step 3: Summarize Data
-    if not run_script("summarization.py"):
+    if not run_script("backend/summarization.py"):
         return jsonify({"error": "Failed at Summarization"}), 500
 
     summary_file = f"{data['business_name'].lower()}_political_summary.json"
