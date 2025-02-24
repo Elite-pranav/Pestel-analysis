@@ -1,0 +1,12 @@
+{
+    "business_name": "Mercedes",
+    "industry": "Automobile",
+    "geographical_focus": "Germany",
+    "time_frame": "Short-term",
+    "target_market": "Europe",
+    "competitors": "Volkswagen",
+    "political_factors": {
+        "Government Policies": true,
+        "Political Stability": true
+    }
+}
