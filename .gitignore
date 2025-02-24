@@ -4,10 +4,7 @@ node_modules/
 .env
 backend/.env
 
-# Ignore API keys in Python files
-backend/bing_scrap_urls.py
-backend/extract_data.py
-backend/summarization.py
+
 
 # Ignore dependency files
 frontend/package-lock.json
