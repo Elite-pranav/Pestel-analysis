@@ -4,7 +4,6 @@ beautifulsoup4==4.13.3
 requests==2.32.3
 pandas==2.2.3
 scikit-learn==1.6.1
-numpy==1.23.5 
 scipy==1.15.2
 selenium==4.28.1
 bs4==0.0.2
@@ -15,3 +14,6 @@ python-dotenv
 spacy==3.7.2
 thinc==8.2.2
 cupy-cuda12x
+setuptools>=65.5.0
+wheel
+numpy==1.23.5  # Ensure compatibility with SpaCy & Thinc
