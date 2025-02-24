@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import subprocess
@@ -7,6 +8,8 @@ import sys
 import json
 import os
 
+=======
+>>>>>>> 7d9e1b1 (Updated requirements.txt and fixed Spacy installation issues)
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for frontend requests
