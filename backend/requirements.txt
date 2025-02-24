@@ -1,22 +1,14 @@
-
-
-python-dotenv
-spacy==3.7.2
-thinc==8.2.2
-setuptools>=65.5.0
-wheel
-numpy==1.23.5  # Ensure compatibility with SpaCy & Thinc
-
-
 Flask==3.1.0
 Flask-Cors==5.0.0
 beautifulsoup4==4.13.3
 requests==2.32.3
 pandas==2.2.3
 scikit-learn==1.6.1
+numpy==2.2.3
 scipy==1.15.2
 selenium==4.28.1
 bs4==0.0.2
 soupsieve==2.6
 openai==1.64.0
+spacy==3.7.2
 gunicorn==21.2.0
