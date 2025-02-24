@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://127.0.0.1:5000", // Replace with your Flask backend URL if different
+  baseURL: "https://pestel-analysis-production.up.railway.app", // Use the deployed backend URL
   headers: {
     "Content-Type": "application/json",
   },
