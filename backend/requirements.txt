@@ -12,3 +12,4 @@ soupsieve==2.6
 openai==1.64.0
 spacy==3.7.2
 gunicorn==21.2.0
+python-dotenv==1.0.1  # (or the latest stable version)
