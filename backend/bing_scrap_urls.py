@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 # Load input dynamically from scraping_input.json
 with open("scraping_input.json", "r", encoding="utf-8") as f:

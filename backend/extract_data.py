@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import pandas as pd
+import os
 
 # Set up ScraperAPI key
 SCRAPER_API_KEY =  os.getenv("SCRAPER_API_KEY")

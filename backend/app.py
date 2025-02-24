@@ -29,7 +29,7 @@ def get_summary(business_name):
 
 def run_script(script_name):
     """Runs a Python script with the correct path."""
-    script_path = os.path.join(os.getcwd(), "backend", script_name)  # Full path
+    script_path = os.path.join(os.getcwd(), script_name)  # Full path
     print(f"\n🚀 Running {script_path}...\n")
     
     start_time = time.time()

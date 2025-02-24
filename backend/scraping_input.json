@@ -1,12 +1,12 @@
 {
-    "business_name": "Mercedes",
-    "industry": "Automobile",
-    "geographical_focus": "Germany",
-    "time_frame": "Short-term",
-    "target_market": "Europe",
-    "competitors": "Volkswagen",
+    "business_name": "Tesla",
+    "industry": "Automotive",
+    "geographical_focus": "Global",
+    "time_frame": "Long-term",
+    "target_market": "EV Consumers",
+    "competitors": "Ford, GM, Rivian",
     "political_factors": {
         "Government Policies": true,
-        "Political Stability": true
+        "Tax Regulations": true
     }
 }
